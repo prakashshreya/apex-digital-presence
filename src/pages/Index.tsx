@@ -185,7 +185,7 @@ const Index = () => {
               Ready to Start Your Next Project?
             </h2>
             <p className="text-primary-foreground/60 max-w-lg mx-auto mb-8 text-lg">
-              Contact us today to discuss how ESI can deliver engineering excellence for your business.
+              Contact us today to discuss how Synergy Infratech can deliver engineering excellence for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-orange hover:bg-orange-light text-accent-foreground font-semibold px-8">

@@ -70,13 +70,10 @@ const Header = () => {
         <div className="container-narrow flex items-center justify-between h-16 lg:h-20">
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-navy to-teal flex items-center justify-center">
-              <span className="text-primary-foreground font-heading font-bold text-lg">E</span>
+              <span className="text-primary-foreground font-heading font-bold text-lg">S</span>
             </div>
             <div>
-              <span className="font-heading font-bold text-lg text-navy">ESI</span>
-              <span className="block text-[10px] text-steel leading-none -mt-0.5 tracking-wider uppercase">
-                Engineering Services
-              </span>
+              <span className="font-heading font-bold text-lg text-navy">Synergy Infratech</span>
             </div>
           </Link>
 
