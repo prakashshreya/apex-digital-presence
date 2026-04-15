@@ -41,12 +41,12 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Industrial facility at sunset" className="w-full h-full object-cover" width={1920} height={1080} />
           <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/80 to-navy/40" />
         </div>
-        <div className="container-narrow relative z-10 py-20">
+        <div className="container-narrow relative z-10 pt-24 pb-32 md:pt-32 md:pb-40">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -82,16 +82,16 @@ const Index = () => {
         </div>
         {/* Stats bar */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="absolute bottom-0 left-0 right-0 bg-navy-dark/80 backdrop-blur-md border-t border-primary-foreground/10"
+          className="relative z-10 bg-navy-dark/90 backdrop-blur-md border-t border-primary-foreground/10"
         >
-          <div className="container-narrow py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="container-narrow py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-2xl md:text-3xl font-heading font-bold text-orange">{stat.value}</div>
-                <div className="text-sm text-primary-foreground/50">{stat.label}</div>
+                <div className="text-sm text-primary-foreground/50 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
