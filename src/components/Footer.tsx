@@ -10,17 +10,14 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal to-orange flex items-center justify-center">
-                <span className="font-heading font-bold text-lg">E</span>
+                <span className="font-heading font-bold text-lg">S</span>
               </div>
               <div>
-                <span className="font-heading font-bold text-lg">ESI</span>
-                <span className="block text-[10px] text-primary-foreground/60 leading-none -mt-0.5 tracking-wider uppercase">
-                  Engineering Services
-                </span>
+                <span className="font-heading font-bold text-lg">Synergy Infratech</span>
               </div>
             </div>
             <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6">
-              Engineering Services International LLC delivers world-class engineering,
+              Synergy Infratech delivers world-class engineering,
               project management, and technical solutions across the Middle East.
             </p>
             <div className="flex gap-3">
@@ -92,7 +89,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/40">
-            © {new Date().getFullYear()} Engineering Services International LLC. All rights reserved.
+            © {new Date().getFullYear()} Synergy Infratech. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-primary-foreground/40">
             <a href="#" className="hover:text-primary-foreground/70 transition-colors">Privacy Policy</a>
