@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Linkedin, Facebook, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -24,13 +24,13 @@ const Footer = () => {
               project management, and technical solutions across the Middle East.
             </p>
             <div className="flex gap-3">
-              {[Linkedin, Facebook, Twitter].map((Icon, i) => (
+              {["LinkedIn", "Facebook", "Twitter"].map((name, i) => (
                 <a
                   key={i}
                   href="#"
-                  className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-teal transition-colors"
+                  className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-teal transition-colors text-xs font-medium"
                 >
-                  <Icon className="w-4 h-4" />
+                  {name[0]}
                 </a>
               ))}
             </div>
