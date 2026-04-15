@@ -72,7 +72,7 @@ const Index = () => {
                   Our Services <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button size="lg" className="bg-primary-foreground text-navy-dark hover:bg-primary-foreground/90 font-semibold">
                 <Link to="/contact" className="flex items-center gap-2">
                   Get a Quote
                 </Link>
