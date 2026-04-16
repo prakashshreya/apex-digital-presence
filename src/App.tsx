@@ -11,6 +11,7 @@ import Projects from "./pages/Projects";
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import Infrastructure from "./pages/Infrastructure";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
