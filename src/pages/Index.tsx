@@ -150,13 +150,41 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Trusted Partners Logo Slider */}
+      <section className="py-16 bg-surface">
+        <div className="container-narrow">
+          <AnimatedSection className="text-center mb-10">
+            <span className="text-teal text-sm font-medium tracking-wider uppercase">Trusted Partners</span>
+            <h2 className="text-3xl md:text-4xl font-heading text-foreground mt-2 mb-4">
+              Trusted by Industry Leaders
+            </h2>
+          </AnimatedSection>
+          <div className="logo-slider">
+            <div className="logo-slider-track">
+              {[...Array(2)].map((_, setIdx) => (
+                <div key={setIdx} className="flex items-center gap-16 px-8">
+                  {["ADNOC", "Cummins", "Khazna", "Caterpillar", "Perkins", "MTU", "Kohler", "Volvo Penta"].map((name) => (
+                    <div
+                      key={`${setIdx}-${name}`}
+                      className="flex-shrink-0 px-6 py-4 bg-card rounded-lg border border-border grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+                    >
+                      <span className="font-heading font-bold text-lg text-foreground whitespace-nowrap">{name}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="section-padding bg-navy">
         <div className="container-narrow">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-teal text-sm font-medium tracking-wider uppercase">Trusted Partners</span>
+            <span className="text-teal text-sm font-medium tracking-wider uppercase">Client Feedback</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-primary-foreground mt-2 mb-4">
-              Trusted by Industry Leaders
+              What Our Partners Say
             </h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

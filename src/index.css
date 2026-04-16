@@ -113,6 +113,28 @@
   }
 }
 
+/* Logo slider */
+@keyframes scroll-logos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.logo-slider {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-slider-track {
+  display: flex;
+  animation: scroll-logos 20s linear infinite;
+  width: max-content;
+}
+
+.logo-slider:hover .logo-slider-track {
+  animation-play-state: paused;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
