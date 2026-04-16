@@ -111,14 +111,14 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="group relative bg-card rounded-xl p-8 border border-border hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 transition-all duration-300 h-full">
+                <Link to={`/services#${['enclosures', 'fuel-tanks', 'e-houses', 'electrical'][i]}`} className="group relative bg-card rounded-xl p-8 border border-border hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 transition-all duration-300 h-full block cursor-pointer">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-navy to-teal flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <service.icon className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <h3 className="text-xl font-heading font-semibold text-foreground mb-3">{service.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
                   <ChevronRight className="w-5 h-5 text-teal mt-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
+                </Link>
               </AnimatedSection>
             ))}
           </div>
@@ -191,8 +191,8 @@ const Index = () => {
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                <Link to="/services">View Solutions</Link>
+              <Button size="lg" className="bg-orange hover:bg-orange-light text-accent-foreground font-semibold px-8 hover:scale-105 hover:shadow-lg transition-all duration-300">
+                <Link to="/services" className="flex items-center gap-2">View Solutions</Link>
               </Button>
             </div>
           </AnimatedSection>

@@ -16,6 +16,7 @@ const navItems = [
       { label: "E-Houses / E-PODs", path: "/services#e-houses" },
       { label: "Electrical Integration", path: "/services#electrical" },
     ],
+
   },
   { label: "Industries", path: "/industries" },
   { label: "Projects", path: "/projects" },
