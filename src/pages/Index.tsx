@@ -159,22 +159,26 @@ const Index = () => {
               Trusted by Industry Leaders
             </h2>
           </AnimatedSection>
-          <div className="logo-slider">
-            <div className="logo-slider-track">
-              {[...Array(2)].map((_, setIdx) => (
-                <div key={setIdx} className="flex items-center gap-16 px-8">
-                  {["ADNOC", "Cummins", "Khazna", "Caterpillar", "Perkins", "MTU", "Kohler", "Volvo Penta"].map((name) => (
-                    <div
-                      key={`${setIdx}-${name}`}
-                      className="flex-shrink-0 px-6 py-4 bg-card rounded-lg border border-border grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
-                    >
-                      <span className="font-heading font-bold text-lg text-foreground whitespace-nowrap">{name}</span>
-                    </div>
-                  ))}
+      <div className="logo-slider">
+        <div className="logo-slider-track">
+          {[...Array(2)].map((_, setIdx) => (
+            <div key={setIdx} className="flex items-center gap-16 px-8">
+              {["ADNOC", "Cummins", "Khazna", "Caterpillar", "Perkins", "MTU", "Kohler", "Volvo Penta"].map((name) => (
+                <div
+                  key={`${setIdx}-${name}`}
+                  className="flex-shrink-0 px-6 py-4 bg-card rounded-lg border border-border grayscale hover:grayscale-0 opacity-60 hover:opacity-100 hover:scale-105 transition-all duration-300"
+                >
+                  <img 
+                    src={`https://placehold.co/150x60/e8f0f2/152D5C/png?text=${name.replace(' ', '+')}&font=montserrat`}
+                    alt={`${name} logo`}
+                    className="h-16 w-auto object-contain"
+                  />
                 </div>
               ))}
             </div>
-          </div>
+          ))}
+        </div>
+      </div>
         </div>
       </section>
 
