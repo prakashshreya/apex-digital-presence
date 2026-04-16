@@ -2,25 +2,25 @@ import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
 import aboutTeam from "@/assets/about-team.jpg";
-import { Target, Eye, Heart, Users } from "lucide-react";
+import { Target, Eye, Heart, Users, Globe, Award } from "lucide-react";
 
 const values = [
-  { icon: Target, title: "Excellence", desc: "We pursue the highest standards in every project we undertake." },
-  { icon: Eye, title: "Innovation", desc: "Continuously adopting cutting-edge technologies and methodologies." },
-  { icon: Heart, title: "Integrity", desc: "Transparent, ethical practices in all our business relationships." },
-  { icon: Users, title: "Collaboration", desc: "Working as one team with our clients to achieve shared success." },
+  { icon: Target, title: "Reliability", desc: "Mission-critical solutions engineered for maximum uptime and performance." },
+  { icon: Award, title: "Excellence", desc: "Uncompromising quality standards in every product we deliver." },
+  { icon: Globe, title: "Global Reach", desc: "Strategic presence across USA, UAE, India, and MENA regions." },
+  { icon: Users, title: "Partnership", desc: "Collaborative approach with clients to achieve shared success." },
 ];
 
 const leaders = [
-  { name: "Ahmed Al-Mansoori", role: "CEO & Managing Director", bio: "30+ years in industrial engineering leadership across the Middle East." },
-  { name: "Dr. Sarah Mitchell", role: "Chief Technical Officer", bio: "PhD in Petroleum Engineering, former VP at Shell Global." },
-  { name: "Khalid Rahman", role: "VP Operations", bio: "20+ years managing large-scale Oil & Gas infrastructure projects." },
-  { name: "Elena Volkov", role: "Head of Engineering", bio: "Specialist in power systems design with 15+ years of experience." },
+  { name: "Dr. Shashi More", role: "Director", bio: "Ph.D. in Mechanical Engineering from Purdue University, specializing in Acoustics. Former Global Data Center Engineering Leader at Cummins Inc. Holds patents in genset enclosures and noise reduction." },
+  { name: "Baskar Nallusamy", role: "Country Head, India", bio: "20+ years of executive experience in Oil & Gas & Data Centre sectors. Global track record driving sales across Middle East, Canada, UK & India." },
+  { name: "Lakshmi Kadambi", role: "Sales & Technical Lead", bio: "40+ years experience in power system design, execution, and management of large projects from 5 MW to 100 MW across Middle East, Singapore, and USA." },
+  { name: "Prabhu Arumugam", role: "Technical & Commercial Manager", bio: "18+ years in Oil & Gas and Data Center sectors. Specializes in large-scale project management across Middle East, Canada, UK, and India." },
 ];
 
 const About = () => (
   <Layout>
-    <PageHero title="About ESI" subtitle="Engineering excellence and innovation since 2005." breadcrumb="About Us" />
+    <PageHero title="About Us" subtitle="Bridging the gap in critical power infrastructure since establishment." breadcrumb="About Us" />
 
     {/* Overview */}
     <section className="section-padding bg-background">
@@ -29,17 +29,20 @@ const About = () => (
           <AnimatedSection>
             <span className="text-teal text-sm font-medium tracking-wider uppercase">Who We Are</span>
             <h2 className="text-3xl md:text-4xl font-heading text-foreground mt-2 mb-6">
-              Pioneering Engineering Solutions in the Middle East
+              Packaged Power Solutions for Mission-Critical Industries
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Engineering Services International LLC (ESI) is a leading multidisciplinary engineering company headquartered in Abu Dhabi, UAE. Since our founding in 2005, we have delivered over 500 projects across the Oil & Gas, Power, Infrastructure, and Water sectors.
+              Synergy Infratech Power Systems specializes in the design, engineering, and supply of mission-critical power solutions. We offer an end-to-end commitment, transforming complex requirements into reliable, deployed infrastructure.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              We design and manufacture robust, packaged power systems, including bespoke Generator Enclosures, specialized Fuel Tanks, E-Houses/E-PODs, and complete Electrical Integration solutions.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Our team of 200+ engineers and technical specialists brings deep domain expertise, innovative thinking, and unwavering commitment to safety and quality. We partner with some of the world's largest energy companies to design, build, and maintain critical industrial infrastructure.
+              Operating across 112,700 sqm of production space with a 250+ skilled workforce, we serve clients across USA, UAE, MENA, and India—supporting the rapid expansion of Data Centers alongside specialized solutions for Oil & Gas infrastructure globally.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
-            <img src={aboutTeam} alt="ESI engineering team" className="rounded-xl shadow-2xl" width={1280} height={720} loading="lazy" />
+            <img src={aboutTeam} alt="Synergy Infratech engineering team" className="rounded-xl shadow-2xl" width={1280} height={720} loading="lazy" />
           </AnimatedSection>
         </div>
       </div>
@@ -56,7 +59,7 @@ const About = () => (
               </div>
               <h3 className="text-2xl font-heading font-bold text-foreground mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To deliver exceptional engineering solutions that drive operational excellence, ensure safety, and create lasting value for our clients and communities across the Middle East and beyond.
+                To deliver reliable and scalable power solutions that meet the most demanding requirements of mission-critical industries. From initial design to site testing and installation, we provide complete turnkey solutions backed by experienced fabrication crews, project management, and in-house engineering expertise.
               </p>
             </div>
           </AnimatedSection>
@@ -67,7 +70,7 @@ const About = () => (
               </div>
               <h3 className="text-2xl font-heading font-bold text-foreground mb-4">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be the most trusted and innovative engineering services provider in the region, recognized for technical excellence, sustainable practices, and transformative impact on industrial development.
+                To be the global leader in packaged power infrastructure—recognized for engineering excellence, unmatched manufacturing scale, and the ability to deliver mission-critical solutions with speed and reliability across Data Centers, Oil & Gas, and Industrial sectors worldwide.
               </p>
             </div>
           </AnimatedSection>
@@ -75,8 +78,35 @@ const About = () => (
       </div>
     </section>
 
-    {/* Values */}
+    {/* Global Presence */}
     <section className="section-padding bg-background">
+      <div className="container-narrow">
+        <AnimatedSection className="text-center mb-16">
+          <span className="text-teal text-sm font-medium tracking-wider uppercase">Global Footprint</span>
+          <h2 className="text-3xl md:text-4xl font-heading text-foreground mt-2 mb-4">Strategic Presence Worldwide</h2>
+        </AnimatedSection>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { flag: "🇺🇸", country: "USA", location: "Dallas, Texas", detail: "Project management & coordination" },
+            { flag: "🇦🇪", country: "UAE", location: "Sharjah Industrial Area", detail: "76,500 sqm heavy manufacturing" },
+            { flag: "🇮🇳", country: "India", location: "Chakan, Pune", detail: "36,500 sqm fabrication & assembly" },
+            { flag: "🌍", country: "MENA", location: "Regional Coverage", detail: "Oil & Gas & infrastructure projects" },
+          ].map((loc, i) => (
+            <AnimatedSection key={i} delay={i * 0.1}>
+              <div className="text-center p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all">
+                <span className="text-4xl mb-3 block">{loc.flag}</span>
+                <h4 className="font-heading font-semibold text-foreground mb-1">{loc.country}</h4>
+                <p className="text-teal text-sm font-medium mb-1">{loc.location}</p>
+                <p className="text-muted-foreground text-xs">{loc.detail}</p>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Values */}
+    <section className="section-padding bg-surface">
       <div className="container-narrow">
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-4">Our Core Values</h2>
@@ -98,7 +128,7 @@ const About = () => (
     </section>
 
     {/* Leadership */}
-    <section className="section-padding bg-surface">
+    <section className="section-padding bg-background">
       <div className="container-narrow">
         <AnimatedSection className="text-center mb-16">
           <span className="text-orange text-sm font-medium tracking-wider uppercase">Leadership</span>

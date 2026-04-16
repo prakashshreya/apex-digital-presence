@@ -5,24 +5,24 @@ import { MapPin, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const jobs = [
-  { title: "Senior Mechanical Engineer", dept: "Engineering", location: "Abu Dhabi", type: "Full-time" },
-  { title: "Project Manager – Oil & Gas", dept: "Project Management", location: "Abu Dhabi", type: "Full-time" },
-  { title: "Electrical Design Engineer", dept: "Engineering", location: "Dubai", type: "Full-time" },
-  { title: "HSE Manager", dept: "Quality & HSE", location: "Abu Dhabi", type: "Full-time" },
-  { title: "Procurement Specialist", dept: "Supply Chain", location: "Abu Dhabi", type: "Full-time" },
-  { title: "Civil/Structural Engineer", dept: "Engineering", location: "Dubai", type: "Full-time" },
+  { title: "Senior Mechanical Engineer", dept: "Engineering", location: "Sharjah, UAE", type: "Full-time" },
+  { title: "Project Manager – Data Centers", dept: "Project Management", location: "Sharjah, UAE", type: "Full-time" },
+  { title: "Electrical Design Engineer", dept: "Engineering", location: "Pune, India", type: "Full-time" },
+  { title: "Fabrication Supervisor", dept: "Manufacturing", location: "Sharjah, UAE", type: "Full-time" },
+  { title: "Quality Control Inspector", dept: "Quality", location: "Pune, India", type: "Full-time" },
+  { title: "Sales Engineer – Power Systems", dept: "Sales", location: "Dallas, USA", type: "Full-time" },
 ];
 
 const Careers = () => (
   <Layout>
-    <PageHero title="Careers at ESI" subtitle="Join a team of world-class engineers shaping the future of industry." breadcrumb="Careers" />
+    <PageHero title="Careers" subtitle="Join our team of engineers and specialists powering critical infrastructure worldwide." breadcrumb="Careers" />
 
     <section className="section-padding bg-background">
       <div className="container-narrow">
         <AnimatedSection className="max-w-2xl mb-12">
           <h2 className="text-3xl font-heading text-foreground mb-4">Why Work With Us?</h2>
           <p className="text-muted-foreground leading-relaxed">
-            At ESI, you'll work on landmark projects that shape the Middle East's industrial landscape. We offer competitive compensation, professional development, and a collaborative culture built on respect and excellence.
+            At Synergy Infratech Power Systems, you'll work on mission-critical power projects for the world's leading Data Centers, Oil & Gas companies, and infrastructure developers. We offer competitive compensation, growth opportunities across three countries, and a culture built on engineering excellence.
           </p>
         </AnimatedSection>
 

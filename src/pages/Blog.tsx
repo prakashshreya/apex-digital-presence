@@ -1,16 +1,15 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Link } from "react-router-dom";
-import { Clock, ArrowRight } from "lucide-react";
+import { Clock } from "lucide-react";
 
 const posts = [
-  { title: "The Future of Digital Twins in Oil & Gas", excerpt: "How digital twin technology is revolutionizing asset management and operational efficiency in the energy sector.", category: "Technology", date: "April 10, 2026", readTime: "5 min" },
-  { title: "Sustainability in Industrial Engineering", excerpt: "ESI's approach to integrating sustainable practices across engineering design and project execution.", category: "Sustainability", date: "March 28, 2026", readTime: "4 min" },
-  { title: "Power Grid Modernization in the UAE", excerpt: "An overview of the latest developments in smart grid technology and their impact on power distribution.", category: "Power", date: "March 15, 2026", readTime: "6 min" },
-  { title: "Safety Excellence: Our Zero-Incident Journey", excerpt: "How ESI achieved 5 million man-hours without a lost-time incident on our flagship projects.", category: "HSE", date: "February 20, 2026", readTime: "3 min" },
-  { title: "Engineering Workforce of Tomorrow", excerpt: "Investing in the next generation of engineers through mentorship, training, and career development programs.", category: "Careers", date: "February 5, 2026", readTime: "4 min" },
-  { title: "Modular Construction: Faster, Smarter, Safer", excerpt: "Exploring the benefits of modular construction techniques for industrial facilities in the Middle East.", category: "Innovation", date: "January 18, 2026", readTime: "5 min" },
+  { title: "The Rise of Hyperscale Data Centers in the Middle East", excerpt: "How the UAE is becoming a global hub for data center infrastructure and the critical role of reliable power solutions.", category: "Data Centers", date: "April 10, 2026", readTime: "5 min" },
+  { title: "Acoustic Engineering for Generator Enclosures", excerpt: "Achieving 80 dBA noise attenuation in high-ambient temperature environments — engineering challenges and solutions.", category: "Engineering", date: "March 28, 2026", readTime: "4 min" },
+  { title: "Modular E-Houses: The Future of Power Distribution", excerpt: "Why prefabricated E-Houses and E-PODs are becoming the preferred choice for rapid deployment in critical infrastructure.", category: "Innovation", date: "March 15, 2026", readTime: "6 min" },
+  { title: "ASME & UL Compliance in Fuel Tank Manufacturing", excerpt: "Understanding the standards and certifications that ensure safety and reliability in industrial fuel storage systems.", category: "Standards", date: "February 20, 2026", readTime: "3 min" },
+  { title: "From 5,000 to 112,700 sqm: Our Growth Story", excerpt: "How Synergy Infratech expanded from a single facility to a multi-site manufacturing powerhouse — all debt-free.", category: "Company", date: "February 5, 2026", readTime: "4 min" },
+  { title: "Value Engineering in Packaged Power Solutions", excerpt: "Optimizing material selection and structural design to reduce weight and cost without compromising integrity.", category: "Engineering", date: "January 18, 2026", readTime: "5 min" },
 ];
 
 const Blog = () => (
