@@ -111,14 +111,14 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="group relative bg-card rounded-xl p-8 border border-border hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 transition-all duration-300 h-full">
+                <Link to={`/services#${['enclosures', 'fuel-tanks', 'e-houses', 'electrical'][i]}`} className="group relative bg-card rounded-xl p-8 border border-border hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 transition-all duration-300 h-full block cursor-pointer">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-navy to-teal flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <service.icon className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <h3 className="text-xl font-heading font-semibold text-foreground mb-3">{service.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
                   <ChevronRight className="w-5 h-5 text-teal mt-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
+                </Link>
               </AnimatedSection>
             ))}
           </div>
@@ -150,13 +150,41 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Trusted Partners Logo Slider */}
+      <section className="py-16 bg-surface">
+        <div className="container-narrow">
+          <AnimatedSection className="text-center mb-10">
+            <span className="text-teal text-sm font-medium tracking-wider uppercase">Trusted Partners</span>
+            <h2 className="text-3xl md:text-4xl font-heading text-foreground mt-2 mb-4">
+              Trusted by Industry Leaders
+            </h2>
+          </AnimatedSection>
+          <div className="logo-slider">
+            <div className="logo-slider-track">
+              {[...Array(2)].map((_, setIdx) => (
+                <div key={setIdx} className="flex items-center gap-16 px-8">
+                  {["ADNOC", "Cummins", "Khazna", "Caterpillar", "Perkins", "MTU", "Kohler", "Volvo Penta"].map((name) => (
+                    <div
+                      key={`${setIdx}-${name}`}
+                      className="flex-shrink-0 px-6 py-4 bg-card rounded-lg border border-border grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+                    >
+                      <span className="font-heading font-bold text-lg text-foreground whitespace-nowrap">{name}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="section-padding bg-navy">
         <div className="container-narrow">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-teal text-sm font-medium tracking-wider uppercase">Trusted Partners</span>
+            <span className="text-teal text-sm font-medium tracking-wider uppercase">Client Feedback</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-primary-foreground mt-2 mb-4">
-              Trusted by Industry Leaders
+              What Our Partners Say
             </h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -191,8 +219,8 @@ const Index = () => {
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                <Link to="/services">View Solutions</Link>
+              <Button size="lg" className="bg-orange hover:bg-orange-light text-accent-foreground font-semibold px-8 hover:scale-105 hover:shadow-lg transition-all duration-300">
+                <Link to="/services" className="flex items-center gap-2">View Solutions</Link>
               </Button>
             </div>
           </AnimatedSection>
