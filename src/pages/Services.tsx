@@ -1,49 +1,69 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Shield, Zap, Globe, Users, Award, Clock, Wrench, Settings, ChevronRight } from "lucide-react";
+import { Shield, Zap, Globe, Wrench, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import servicesPower from "@/assets/services-power.jpg";
 
 const services = [
-  { id: "engineering", icon: Shield, title: "Engineering Design", desc: "From feasibility studies to detailed design, our engineering team delivers solutions across mechanical, electrical, civil, and instrumentation disciplines. We leverage the latest CAD/CAE tools and simulation software to optimize designs for safety, efficiency, and cost.", features: ["Conceptual & Detailed Design", "3D Modeling & Simulation", "Process Engineering", "Structural Analysis"] },
-  { id: "project-management", icon: Globe, title: "Project Management", desc: "Our PMO delivers projects on time and within budget using proven methodologies. We provide full project lifecycle management from initiation through closeout, ensuring alignment with client objectives.", features: ["Planning & Scheduling", "Cost Control", "Risk Management", "Stakeholder Communication"] },
-  { id: "power-systems", icon: Zap, title: "Power Systems", desc: "Complete power generation and distribution solutions including substations, transmission lines, and control systems for industrial and utility-scale applications.", features: ["Substation Design", "Protection Systems", "Power Quality Analysis", "Grid Integration"] },
-  { id: "procurement", icon: Users, title: "Procurement & Supply Chain", desc: "Strategic sourcing, vendor management, and logistics coordination to ensure timely delivery of materials and equipment for complex industrial projects.", features: ["Vendor Qualification", "Material Tracking", "Expediting", "Logistics Management"] },
-  { id: "quality", icon: Award, title: "Quality & HSE", desc: "Comprehensive quality assurance and health, safety, and environmental management programs that exceed international standards and regulatory requirements.", features: ["ISO 9001 / 14001 / 45001", "Safety Audits", "Environmental Impact", "Compliance Management"] },
-  { id: "maintenance", icon: Clock, title: "Maintenance & Support", desc: "24/7 maintenance, turnaround, and technical support services to maximize asset uptime and operational efficiency across industrial facilities.", features: ["Preventive Maintenance", "Turnaround Management", "Emergency Response", "Asset Management"] },
-  { id: "construction", icon: Wrench, title: "Construction Management", desc: "On-site construction supervision and management ensuring quality workmanship, safety compliance, and adherence to project timelines.", features: ["Site Supervision", "Progress Monitoring", "Change Management", "Commissioning Support"] },
-  { id: "consulting", icon: Settings, title: "Technical Consulting", desc: "Expert consulting services in process optimization, energy efficiency, digital transformation, and regulatory compliance for industrial operations.", features: ["Process Optimization", "Energy Audits", "Digital Transformation", "Regulatory Advisory"] },
+  {
+    id: "enclosures",
+    icon: Shield,
+    title: "Acoustic Generator Enclosures",
+    desc: "Weatherproof & sound-attenuated designs ranging from 65 dBA @ 1m to 85 dBA options. Suitable for 30 kVA to 3000 kVA gensets with custom ISO container or bespoke dimensions for rapid deployment. Our enclosures are engineered for extreme ambient conditions and comply with international noise and safety standards.",
+    features: ["Weatherproof & Sound-Attenuated", "30 kVA to 3000 kVA Range", "Custom ISO or Bespoke Dimensions", "High-Ambient Temperature Performance"],
+  },
+  {
+    id: "fuel-tanks",
+    icon: Zap,
+    title: "Fuel Tanks & Piping Systems",
+    desc: "Complete fuel storage and distribution systems including critical grade silencers (cylindrical, square, or hockey puck), ASME B31/API compliant piping spools, and comprehensive thermal insulation and cladding services. From containerized tanks to frac tanks and UL-listed compliant solutions.",
+    features: ["Critical Grade Silencers", "ASME B31 / API Compliant", "Thermal Insulation & Cladding", "UL Listed & Compliant Tanks"],
+  },
+  {
+    id: "e-houses",
+    icon: Globe,
+    title: "E-Houses / E-PODs",
+    desc: "Prefabricated modular housing for HV/MV switchgear and transformers. Available in fire-rated and blast-proof configurations, fully integrated with lighting, Fire & Gas (F&G) systems, and cabling for complete Plug & Play deployment on site.",
+    features: ["HV/MV Switchgear Housing", "Fire-Rated & Blast-Proof Options", "Plug & Play Integration", "F&G System Integration"],
+  },
+  {
+    id: "electrical",
+    icon: Wrench,
+    title: "Electrical Integration (E&I)",
+    desc: "Complete design, installation, and maintenance of control instruments. Custom control panels and switchgear integration with full Factory Acceptance Testing (FAT) capabilities. We deliver turnkey electrical packages including power cabling to switchgear and complete system commissioning.",
+    features: ["Custom Control Panels", "Switchgear Integration", "Factory Acceptance Testing", "Turnkey Electrical Packages"],
+  },
 ];
 
 const Services = () => (
   <Layout>
-    <PageHero title="Our Services" subtitle="Comprehensive engineering and project management solutions for modern industry." breadcrumb="Services" />
+    <PageHero title="Our Solutions" subtitle="End-to-end packaged power solutions engineered for mission-critical reliability." breadcrumb="Services" />
 
-    {/* Overview image */}
+    {/* Overview */}
     <section className="section-padding bg-background">
       <div className="container-narrow">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <AnimatedSection>
             <span className="text-teal text-sm font-medium tracking-wider uppercase">What We Offer</span>
             <h2 className="text-3xl md:text-4xl font-heading text-foreground mt-2 mb-6">
-              End-to-End Engineering Solutions
+              Integrated Power Solutions
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              ESI provides a complete range of engineering, procurement, construction management, and technical consulting services. Our multidisciplinary approach enables us to deliver integrated solutions that optimize performance and reduce costs.
+              Synergy Infratech Power Systems provides complete solutions from initial design to site testing and installation. Our end-to-end commitment transforms complex requirements into reliable, deployed infrastructure.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              With deep expertise across Oil & Gas, Power, Water, and Infrastructure sectors, we bring industry-specific knowledge to every engagement.
+              Backed by experienced fabrication crews, in-house engineering experts, and 112,700 sqm of production space, we deliver mission-critical power solutions for Data Centers, Oil & Gas, and Global Infrastructure projects.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
-            <img src={servicesPower} alt="Power infrastructure" className="rounded-xl shadow-2xl" loading="lazy" width={800} height={600} />
+            <img src={servicesPower} alt="Data center power infrastructure" className="rounded-xl shadow-2xl" loading="lazy" width={800} height={600} />
           </AnimatedSection>
         </div>
 
         {/* Services grid */}
         <div className="space-y-8">
-          {services.map((s, i) => (
+          {services.map((s) => (
             <AnimatedSection key={s.id} delay={0.1}>
               <div id={s.id} className="scroll-mt-24 group bg-card rounded-xl border border-border p-8 md:p-10 hover:border-teal/30 hover:shadow-xl transition-all duration-300">
                 <div className="flex flex-col md:flex-row gap-6">
@@ -75,10 +95,10 @@ const Services = () => (
       <div className="container-narrow text-center">
         <AnimatedSection>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
-            Need a Custom Solution?
+            Need a Custom Power Solution?
           </h2>
           <p className="text-primary-foreground/60 max-w-lg mx-auto mb-8">
-            Our team is ready to discuss your specific requirements and deliver a tailored engineering solution.
+            Our engineering team is ready to discuss your specific requirements and deliver a tailored solution.
           </p>
           <Link to="/contact" className="inline-flex items-center gap-2 bg-orange hover:bg-orange-light text-accent-foreground font-semibold px-8 py-3 rounded-lg transition-colors">
             Contact Us <ChevronRight className="w-4 h-4" />

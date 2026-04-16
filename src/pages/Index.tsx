@@ -1,40 +1,38 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Zap, Globe, Users, Award, Clock, ChevronRight } from "lucide-react";
+import { ArrowRight, Shield, Zap, Globe, Wrench, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import Layout from "@/components/Layout";
 import heroImage from "@/assets/hero-industrial.jpg";
 
 const stats = [
-  { value: "500+", label: "Projects Delivered" },
-  { value: "18+", label: "Years Experience" },
-  { value: "15+", label: "Countries Served" },
-  { value: "98%", label: "Client Satisfaction" },
+  { value: "112,700", label: "sqm Production Area" },
+  { value: "250+", label: "Skilled Workforce" },
+  { value: "1000+", label: "Projects Delivered" },
+  { value: "100%", label: "Debt-Free" },
 ];
 
 const services = [
-  { icon: Shield, title: "Engineering Design", desc: "Comprehensive engineering solutions from concept to detailed design for industrial facilities." },
-  { icon: Zap, title: "Power Systems", desc: "Complete power generation and distribution solutions for critical infrastructure." },
-  { icon: Globe, title: "Project Management", desc: "End-to-end project management ensuring on-time, on-budget delivery." },
-  { icon: Users, title: "Procurement", desc: "Strategic sourcing and supply chain management for complex projects." },
-  { icon: Award, title: "Quality Assurance", desc: "Rigorous quality control processes meeting international standards." },
-  { icon: Clock, title: "Maintenance & Support", desc: "24/7 maintenance and technical support for operational excellence." },
+  { icon: Shield, title: "Generator Enclosures", desc: "Weatherproof & sound-attenuated acoustic enclosures for 30 kVA to 3000 kVA gensets, custom ISO or bespoke dimensions." },
+  { icon: Zap, title: "Fuel Tanks & Piping", desc: "Critical grade silencers, ASME B31/API compliant piping spools, complete thermal insulation and cladding services." },
+  { icon: Globe, title: "E-Houses / E-PODs", desc: "Prefabricated housing for HV/MV switchgear & transformers. Fire-rated & blast-proof options with Plug & Play integration." },
+  { icon: Wrench, title: "Electrical Integration", desc: "Design, installation, and maintenance of control instruments. Custom control panels, switchgear integration, and full FAT capabilities." },
 ];
 
 const industries = [
+  { title: "Data Centers", image: "🖥️" },
   { title: "Oil & Gas", image: "🛢️" },
   { title: "Power Generation", image: "⚡" },
   { title: "Infrastructure", image: "🏗️" },
-  { title: "Water & Utilities", image: "💧" },
-  { title: "Petrochemical", image: "🏭" },
-  { title: "Renewable Energy", image: "☀️" },
+  { title: "Manufacturing", image: "🏭" },
+  { title: "Telecommunications", image: "📡" },
 ];
 
 const testimonials = [
-  { quote: "ESI delivered exceptional results on our refinery expansion project. Their technical expertise and project management capabilities are world-class.", author: "Ahmed Al-Rashid", role: "VP Operations, ADNOC" },
-  { quote: "We've partnered with ESI on multiple power infrastructure projects. Their commitment to quality and safety is unmatched in the region.", author: "Sarah Thompson", role: "Director, Emirates Power" },
-  { quote: "The engineering solutions provided by ESI transformed our facility's operational efficiency by over 40%. Highly recommended.", author: "Mohammad Hassan", role: "Plant Manager, Gulf Industries" },
+  { quote: "Synergy Infratech delivered 60+ custom generator enclosures for our hyperscale data center project, achieving strict 80 dBA noise performance in extreme conditions.", author: "Cummins Arabia FZCO", role: "Data Center Power Partner" },
+  { quote: "Their end-to-end capability from design to site installation, combined with their massive production capacity, makes them an ideal partner for large-scale power projects.", author: "ADNOC", role: "Oil & Gas Sector" },
+  { quote: "The team's deep expertise in acoustic engineering and containerized power solutions has been invaluable for our critical infrastructure deployments.", author: "Khazna Data Centers", role: "UAE Data Center Operator" },
 ];
 
 const Index = () => {
@@ -43,7 +41,7 @@ const Index = () => {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Industrial facility at sunset" className="w-full h-full object-cover" width={1920} height={1080} />
+          <img src={heroImage} alt="Power generation facility with containerized systems" className="w-full h-full object-cover" width={1920} height={1080} />
           <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/80 to-navy/40" />
         </div>
         <div className="container-narrow relative z-10 pt-24 pb-32 md:pt-32 md:pb-40">
@@ -54,27 +52,27 @@ const Index = () => {
             className="max-w-2xl"
           >
             <span className="inline-block px-4 py-1.5 rounded-full bg-teal/20 text-teal text-sm font-medium mb-6 border border-teal/30">
-              Engineering Excellence Since 2005
+              Packaged Power Solutions
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-6">
-              Engineering the{" "}
+              Engineering Reliable{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-light to-orange">
-                Future
+                Power Infrastructure
               </span>{" "}
-              of Industry
+              for Critical Industries
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/70 mb-8 max-w-lg leading-relaxed">
-              Delivering world-class engineering solutions across Oil & Gas, Power, and Infrastructure sectors throughout the Middle East.
+              Supporting Data Centers, Oil & Gas & Global Infrastructure with mission-critical power solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-orange hover:bg-orange-light text-accent-foreground font-semibold text-base px-8">
                 <Link to="/services" className="flex items-center gap-2">
-                  Our Services <ArrowRight className="w-4 h-4" />
+                  Explore Solutions <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
               <Button size="lg" className="bg-primary-foreground text-navy-dark hover:bg-primary-foreground/90 font-semibold">
                 <Link to="/contact" className="flex items-center gap-2">
-                  Get a Quote
+                  Contact Us
                 </Link>
               </Button>
             </div>
@@ -104,13 +102,13 @@ const Index = () => {
           <AnimatedSection className="text-center mb-16">
             <span className="text-teal text-sm font-medium tracking-wider uppercase">What We Do</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-foreground mt-2 mb-4">
-              Our Core Services
+              Our Core Solutions
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Comprehensive engineering and project management solutions tailored to meet the demands of modern industry.
+              End-to-end packaged power solutions from initial design to site testing and installation.
             </p>
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="group relative bg-card rounded-xl p-8 border border-border hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 transition-all duration-300 h-full">
@@ -156,7 +154,7 @@ const Index = () => {
       <section className="section-padding bg-navy">
         <div className="container-narrow">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-teal text-sm font-medium tracking-wider uppercase">Testimonials</span>
+            <span className="text-teal text-sm font-medium tracking-wider uppercase">Trusted Partners</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-primary-foreground mt-2 mb-4">
               Trusted by Industry Leaders
             </h2>
@@ -182,10 +180,10 @@ const Index = () => {
         <div className="container-narrow text-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
-              Ready to Start Your Next Project?
+              Ready to Power Your Next Project?
             </h2>
             <p className="text-primary-foreground/60 max-w-lg mx-auto mb-8 text-lg">
-              Contact us today to discuss how Synergy Infratech can deliver engineering excellence for your business.
+              Contact us today to discuss how Synergy Infratech Power Systems can deliver mission-critical power solutions for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-orange hover:bg-orange-light text-accent-foreground font-semibold px-8">
@@ -194,7 +192,7 @@ const Index = () => {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                <Link to="/services">View Services</Link>
+                <Link to="/services">View Solutions</Link>
               </Button>
             </div>
           </AnimatedSection>

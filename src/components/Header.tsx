@@ -11,15 +11,15 @@ const navItems = [
     label: "Services",
     path: "/services",
     children: [
-      { label: "Engineering Solutions", path: "/services#engineering" },
-      { label: "Project Management", path: "/services#project-management" },
-      { label: "Maintenance & Support", path: "/services#maintenance" },
+      { label: "Generator Enclosures", path: "/services#enclosures" },
+      { label: "Fuel Tanks & Piping", path: "/services#fuel-tanks" },
+      { label: "E-Houses / E-PODs", path: "/services#e-houses" },
+      { label: "Electrical Integration", path: "/services#electrical" },
     ],
   },
   { label: "Industries", path: "/industries" },
   { label: "Projects", path: "/projects" },
-  { label: "Careers", path: "/careers" },
-  { label: "Blog", path: "/blog" },
+  { label: "Infrastructure", path: "/infrastructure" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -44,17 +44,17 @@ const Header = () => {
       <div className="bg-navy text-primary-foreground text-sm hidden md:block">
         <div className="container-narrow flex justify-between items-center py-2">
           <div className="flex items-center gap-6">
-            <a href="tel:+971000000000" className="flex items-center gap-1.5 hover:text-orange transition-colors">
+            <a href="tel:+12815221920" className="flex items-center gap-1.5 hover:text-orange transition-colors">
               <Phone className="w-3.5 h-3.5" />
-              +971 XX XXX XXXX
+              +1 281 522 1920
             </a>
-            <a href="mailto:info@esi-me.com" className="flex items-center gap-1.5 hover:text-orange transition-colors">
+            <a href="mailto:info@synergy-infratech.com" className="flex items-center gap-1.5 hover:text-orange transition-colors">
               <Mail className="w-3.5 h-3.5" />
-              info@esi-me.com
+              info@synergy-infratech.com
             </a>
           </div>
           <div className="text-muted-foreground text-xs">
-            Engineering Excellence Since 2005
+            Packaged Power Solutions. Engineered for Mission-Critical Reliability.
           </div>
         </div>
       </div>
@@ -72,8 +72,9 @@ const Header = () => {
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-navy to-teal flex items-center justify-center">
               <span className="text-primary-foreground font-heading font-bold text-lg">S</span>
             </div>
-            <div>
-              <span className="font-heading font-bold text-lg text-navy">Synergy Infratech</span>
+            <div className="flex flex-col">
+              <span className="font-heading font-bold text-lg text-navy leading-tight">Synergy Infratech</span>
+              <span className="text-[10px] text-muted-foreground leading-tight tracking-wider uppercase">Power Systems</span>
             </div>
           </Link>
 
